@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
+  <title><%= category.charAt(0).toUpperCase() + category.slice(1) %> Menu</title>
 </head>
 <body>
   <%- include('./partials/nav') %>
-  <h1>Full Menu</h1>
+  <h1><%= category.charAt(0).toUpperCase() + category.slice(1) %> Menu</h1>
 
   <ul>
-    <% menu.forEach(function(item) { %>
+    <% menuItems.forEach(function(item) { %>
       <li>
-        <h2><%= item.name %> - $<%= item.price %></h2>
+        <h3><%= item.name %> - $<%= item.price %></h3>
         <p>Rating: <%= item.rating %>/5</p>
         <p><%= item.details %></p>
       </li>
